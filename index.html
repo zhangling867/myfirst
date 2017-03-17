@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Wayou">
+	<meta name="description" content="hichat | a simple chat application built with node.js and websocket">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>hichat</title>
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<link rel="shortout icon" type="image/x-icon" href="favicon.ioo">
+	<link rel="icon" type="image/x-icon" href="favicon.ioo">
+</head>
+<body>
+<div class="wrapper">
+	<div class="banner">
+		<h1>HiChat :)</h1>
+		<span id="status"></span>
+	</div>
+	<div id="historyMsg"></div>
+	<div class="controle">
+		<div class="items">
+			<input type="color" name="" id="colorStyle" title="font color" placeHolder="#000">
+			<input type="button" name="" id="emoji" value="emoji" title="emoji">
+			<label class="sendLable" for="sendImage">
+				<input type="button" name="image">
+				<input type="file" name="image" id="sendImage">
+			</label>
+			<input type="button" name="" value="clear" id="clearBtn" title="clear screen">
+		</div>
+		<textarea id="messageInput" placeHolder="ender to send"></textarea>
+		<input type="button" name="" id="sendBtn" value="SEND">
+		<div id="emojiWrapper"></div>
+	</div>
+	<div id="loginWrapper">
+		<p id="info">connecting to servee....</p>
+		<div id="nickWrapper">
+			<input type="text" name="" id="nicknameInput" placeHolder="nickname">
+			<input type="button" name="" id="loginBtn" value="OK">
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="script/hichat.js"></script>
+</body>
+</html>
