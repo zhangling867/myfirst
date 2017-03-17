@@ -1,5 +1,6 @@
 - type: parallel
-  encrypted_dockercfg_path: dockercfg.encrypted
+  # encrypted_dockercfg_path: dockercfg.encrypted
+   encrypted_dockercfg_path: index.html
   steps:
   - service: app
     command: ./script/ci/ci.parallel spec
